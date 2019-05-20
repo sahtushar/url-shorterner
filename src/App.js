@@ -45,6 +45,7 @@ class TextFields extends React.Component {
 
   handleChange = url => event => {
     this.setState({ [url]: event.target.value });
+    this.setState({originalUrl:undefined})
   };
 
 
