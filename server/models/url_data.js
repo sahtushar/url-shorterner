@@ -14,4 +14,16 @@ const urlSchema= new Schema({
     }
 });
 
+urlSchema.statics.getUrls = function() {
+    return new Promise((resolve, reject) => {
+        this.find((err, docs) => {
+            if(err) {
+                console.error(err)
+                return reject(err)
+            }
+            resolve(docs)
+        })
+    })
+}
+
 mongoose.model('url_data', urlSchema);

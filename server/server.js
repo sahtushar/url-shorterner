@@ -39,6 +39,7 @@ app.use((req, res, next) => {
 
 let router = require("express").Router();
 app.use("/", router);
+
 router.post('/short_url', async (req, res) => {
 
     try {
@@ -89,6 +90,11 @@ router.post('/short_url', async (req, res) => {
     } catch (e) {
         console.log(e);
     }
+});
+router.post('/getData', async (req, res) => {
+    let all_urls=await Url.getUrls();
+    await res.send(JSON.stringify(all_urls));
+
 });
 
 
