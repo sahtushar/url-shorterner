@@ -92,5 +92,5 @@ router.post('/short_url', async (req, res) => {
 });
 
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+app.listen(port, () => console.log(`UrlShortener Server listening on port ${port}!`));
 
