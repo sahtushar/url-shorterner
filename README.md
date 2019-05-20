@@ -6,12 +6,12 @@ In the project directory, you can run:
 
 ### `npm install`
 
-This will be first step to install all dependencies
+This will be first step to install all dependencies.
 
 
 ### `node server/server.js`
 
-This will start the server at  [http://localhost:3003](http://localhost:3003). This will intitialise the api also.
+This will start the server at  [http://localhost:3003](http://localhost:3003). This will initialise the api also.
 
 ### `npm start`
 
