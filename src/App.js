@@ -1,8 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
 import { withStyles } from '@material-ui/core/styles';
-import MenuItem from '@material-ui/core/MenuItem';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import axios from "axios";
@@ -71,13 +69,9 @@ class TextFields extends React.Component {
 
   this.setState({url:res.data.shortenedUrl, originalUrl:res.data.url});
 
-
-
     if (!res.data || !res.data.success) {
       return false;
     }
-
-
 
   }
 
@@ -111,9 +105,6 @@ class TextFields extends React.Component {
           <div className={classes.center}>
           {this.state.url && this.state.originalUrl ? <a  href={"http://"+this.state.originalUrl}>{this.state.url}</a> : null}
           </div>
-
-
-
 
         </form>
         </div>
